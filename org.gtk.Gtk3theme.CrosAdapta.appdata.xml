@@ -2,7 +2,7 @@
 <component type="runtime">
   <id>org.gtk.Gtk3theme.CrosAdapta</id>
   <metadata_license>CC0-1.0</metadata_license>
-  <name>ChrosAdapta</name>
+  <name>CrosAdapta</name>
   <summary>Chrome OS GTK theme</summary>
   <description>
     <p>A GTK theme designed to fit in with Chrome OS</p>
