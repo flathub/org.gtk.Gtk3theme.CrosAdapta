@@ -1,0 +1,41 @@
+{
+  "id": "org.gtk.Gtk3theme.CrosAdapta",
+  "branch": "3.22",
+  "runtime": "org.freedesktop.Sdk",
+  "build-extension": true,
+  "sdk": "org.freedesktop.Sdk",
+  "runtime-version": "19.08",
+  "appstream-compose": false,
+  "separate-locales": false,
+  "modules": [
+    {
+      "name": "CrosAdapta",
+      "buildsystem": "simple",
+      "build-commands": [
+        "cp -r gtk-3.0/* ${FLATPAK_DEST}"
+      ],
+      "sources": [
+        {
+          "type": "git",
+          "url": "https://chromium.googlesource.com/chromiumos/third_party/cros-adapta",
+          "commit": "eb6d8c1832b9181926df107faf41a80887fd982c"
+        }
+      ]
+    },
+    {
+      "name": "appdata",
+      "buildsystem": "simple",
+      "build-commands": [
+        "mkdir -p ${FLATPAK_DEST}/share/appdata",
+        "cp org.gtk.Gtk3theme.CrosAdapta.appdata.xml ${FLATPAK_DEST}/share/appdata",
+        "appstream-compose --basename=org.gtk.Gtk3theme.CrosAdapta --prefix=${FLATPAK_DEST} --origin=flatpak org.gtk.Gtk3theme.CrosAdapta"
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "path": "org.gtk.Gtk3theme.CrosAdapta.appdata.xml"
+        }
+      ]
+    }
+  ]
+}
