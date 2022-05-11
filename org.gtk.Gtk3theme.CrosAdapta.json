@@ -4,7 +4,7 @@
   "runtime": "org.freedesktop.Platform",
   "build-extension": true,
   "sdk": "org.freedesktop.Sdk",
-  "runtime-version": "19.08",
+  "runtime-version": "21.08",
   "appstream-compose": false,
   "separate-locales": false,
   "modules": [
@@ -18,7 +18,7 @@
         {
           "type": "git",
           "url": "https://chromium.googlesource.com/chromiumos/third_party/cros-adapta",
-          "commit": "eb6d8c1832b9181926df107faf41a80887fd982c"
+          "commit": "46fd2136aa799bb17dfb1002278f98e6397e5806"
         }
       ]
     },
